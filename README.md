@@ -37,3 +37,7 @@ Each course has its own dedicated folder within this repository. These folders c
 
 ## Join the Learning Journey!
 We are excited to see your contributions and to grow this repository into a rich hub of knowledge for developers at all stages of their learning journey. Happy coding and learning!
+
+### Where to find courses:
+- https://courses.webdevsimplified.com : Password can be found in bitwarden
+
