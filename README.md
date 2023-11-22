@@ -1,5 +1,7 @@
 # DevEduHub: A Collaborative Coding Education Repository
 
+![DEVHUBLOGO](/assets/images/DEVEDUHUB.png)
+
 ## Introduction
 Welcome to **DevEduHub**, a collaborative repository designed to gather and share educational resources and code from various courses in the field of software development. This platform is a communal space where empa developers can contribute, share, and enhance their learning experiences.
 
