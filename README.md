@@ -57,3 +57,8 @@ We are excited to see your contributions and to grow this repository into a rich
 
 - https://courses.webdevsimplified.com : Password can be found in bitwarden
 - https://fireship.io : login with magic mail (info)
+
+## More public resources to learn:
+- [Josh tried coding](https://www.youtube.com/@joshtriedcoding)
+- [Beyond Fireship](https://www.youtube.com/@beyondfireship)
+
