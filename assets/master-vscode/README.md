@@ -17,7 +17,7 @@ Useful commands:
 - `code ~/.bash_profile`: Edit the root config file.
 
 ### Tweak Settings:
-
+Recommended settings:
 - Atom One Dark theme
 - VSCode-icons
 - Fira Code font: 
@@ -163,14 +163,14 @@ Create new directories automatically when adding a new file in File Explorer:
 - **Peek Implementations:**
   - Right-click on a method or function.
   - Select "Peek Implementations" to see where it's implemented.
-- **Safe Rename:**
-  - Renames the symbol and all references to it and ensures consistency across the project.
+## Safe Rename:
+  Renames the symbol and all references to it and ensures consistency across the project.
 - **Rename Symbol:**
   - Find the original function or variable.
   - Right-click on the symbol.
   - Select "Rename Symbol."
-- **Code Actions:**
-  - Use code actions to automatically refactor code.
+## Code Actions:
+Use code actions to automatically refactor code.
 - **Refactor Tool:**
   - Look for the 💡 in VS Code.
   - Click it or use Ctrl + . to access available actions.
@@ -213,12 +213,9 @@ Create new directories automatically when adding a new file in File Explorer:
   - Use the command palette with Ctrl+K.
   - Alternatively, launch VS Code directly from a GitHub repo using “.”.
 - **Remote Repos:**
-  - Connect local
-
- VS Code to a remote Git repo.
+  - Connect local VS Code to a remote Git repo to work locally on a GitHub repo without the need to clone.
   - Click the blue icon in the bottom-left corner to open the remote repositories panel.
   - Authorize the account to access and edit repositories remotely.
-  - This enables working locally on a GitHub repo without the need to clone.
 
 ### Debugger:
 
