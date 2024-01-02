@@ -1,6 +1,8 @@
-# Next.js 13 Course Summary
+# Next.js Full Course
+### Master the Fundamentals of Next.js 13 and the App Router
 
-This repository contains the key concepts and code examples from the Fireship.io Next.js 13 course. It serves as a concise guide to quickly grasp the fundamentals of Next.js 13.
+This repository contains the key concepts, code examples, and a comprehensive summary of the Fireship.io Next.js Full Course. It serves as a concise guide to quickly grasp the fundamentals of Next.js 13 and the App Router.
+The course content is up-to-date with the latest Next.js version (v13.4 as of June 22nd, 2023).
 
 ## 1. 🚏 APP ROUTER
 
