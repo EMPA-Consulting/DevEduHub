@@ -10,6 +10,11 @@ export default function useEffectHook(){
     // useEffect hook that runs once on component mount
     useEffect(() => {
         console.log('onMount')
+
+        // This is a cleanup function, it runs when the component unmounts 
+        return () => {
+        console.log('unMount')
+    };
     }, []) // Empty dependency array means this effect runs once on mount and not on updates
 
     // useEffect hook that runs whenever 'resourceType' changes
@@ -24,6 +29,8 @@ export default function useEffectHook(){
         .then(json => setItems(json))
     }, [resourceType] ) // 'resourceType' in the dependency array means this effect runs on updates to 'resourceType'
 
+
+    
     return (
         <>
             <div>
