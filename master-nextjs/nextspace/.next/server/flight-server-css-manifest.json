@@ -1,0 +1,32 @@
+{
+  "cssImports": {
+    "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/layout.tsx": [
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Open_Sans\",\"arguments\":[{\"weight\":\"400\",\"subsets\":[\"latin\"]}],\"variableName\":\"myFont\"}",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/NavMenu.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/globals.css"
+    ],
+    "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/users/page.tsx": [
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/components/UserCard/UserCard.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/users/page.module.css"
+    ]
+  },
+  "cssModules": {
+    "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/page": [
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/NavMenu.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/globals.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Open_Sans\",\"arguments\":[{\"weight\":\"400\",\"subsets\":[\"latin\"]}],\"variableName\":\"myFont\"}"
+    ],
+    "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/users/page": [
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/components/UserCard/UserCard.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/users/page.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/NavMenu.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/globals.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Open_Sans\",\"arguments\":[{\"weight\":\"400\",\"subsets\":[\"latin\"]}],\"variableName\":\"myFont\"}"
+    ],
+    "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/dashboard/page": [
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/NavMenu.module.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/app/globals.css",
+      "/Users/cristinagurriaran/Documents/GitHub/DevEduHub/master-nextjs/nextspace/node_modules/next/font/google/target.css?{\"path\":\"app/layout.tsx\",\"import\":\"Open_Sans\",\"arguments\":[{\"weight\":\"400\",\"subsets\":[\"latin\"]}],\"variableName\":\"myFont\"}"
+    ]
+  }
+}
