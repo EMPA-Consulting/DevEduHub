@@ -10,6 +10,9 @@ import UseReducer from './lesser-used-hooks/useReducer/UseReducer';
 import UseTransitionHook from './lesser-used-hooks/UseTransition';
 import UseDeferredValueHook from './lesser-used-hooks/useDeferredValue/UseDeferredValue';
 import UseLayoutEffectHook from './optional-hooks/useLayoutEffect/UseLayoutEffect';
+import UseDebugValueHook from './optional-hooks/useDebugValue/UseDebugValue';
+import UseImperativeHandleHook from './optional-hooks/useImperativeHandle/UseImperativeHandle';
+import UseId from './optional-hooks/useId/UseId';
 
 function App() {
   const [activeHook, setActiveHook] = useState('');
@@ -36,6 +39,12 @@ function App() {
         return <UseDeferredValueHook />;
       case 'useLayoutEffect':
         return <UseLayoutEffectHook />;
+      case 'useDebugValue':
+        return <UseDebugValueHook />;
+      case 'useImperativeHandle':
+        return <UseImperativeHandleHook />;
+      case 'useId':
+        return <UseId />;
 
       default:
         return null;
@@ -62,7 +71,9 @@ function App() {
           <button onClick={() => setActiveHook('useTransition')}>useTransition Hook</button>
           <button onClick={() => setActiveHook('useDeferredValue')}>useDeferredValue Hook</button>
           <button onClick={() => setActiveHook('useLayoutEffect')}>useLayoutEffect Hook</button>
-
+          <button onClick={() => setActiveHook('useDebugValue')}>useDebugValue Hook</button>
+          <button onClick={() => setActiveHook('useImperativeHandle')}>useImperativeHandle Hook</button>
+          <button onClick={() => setActiveHook('useId')}>useId Hook</button>
 
         </>
       )}
