@@ -13,72 +13,88 @@ import UseLayoutEffectHook from './optional-hooks/useLayoutEffect/UseLayoutEffec
 import UseDebugValueHook from './optional-hooks/useDebugValue/UseDebugValue';
 import UseImperativeHandleHook from './optional-hooks/useImperativeHandle/UseImperativeHandle';
 import UseId from './optional-hooks/useId/UseId';
+import CustomHook from './custom-hooks/CustomHook';
+import ExperimentalHooks from './experimental-hooks/ExperimentalHooks';
+
+const categories = [
+  {
+    name: 'Must Known Hooks',
+    hooks: [
+      { name: 'useState', component: UseState },
+      { name: 'useEffect', component: UseEffect },
+      { name: 'useContext', component: UseContext },
+    ],
+  },
+  {
+    name: 'Lesser Used Hooks',
+    hooks: [
+      { name: 'useRef', component: UseRef },
+      { name: 'useMemo', component: UseMemo },
+      { name: 'useCallback', component: UseCallback },
+      { name: 'useReducer', component: UseReducer },
+      { name: 'useTransition', component: UseTransitionHook },
+      { name: 'useDeferredValue', component: UseDeferredValueHook },
+    ],
+  },
+  {
+    name: 'Optional Hooks',
+    hooks: [
+      { name: 'useLayoutEffect', component: UseLayoutEffectHook },
+      { name: 'useDebugValue', component: UseDebugValueHook },
+      { name: 'useImperativeHandle', component: UseImperativeHandleHook },
+      { name: 'useId', component: UseId },
+    ],
+  },
+  {
+    name: 'Custom Hooks',
+    hooks: [
+      { name: 'Custom Hooks', component: CustomHook },
+    ],
+  },
+  {
+    name: 'Experimental Hooks',
+    hooks: [
+      { name: 'Experimental Hooks', component: ExperimentalHooks },
+    ],
+  },
+];
 
 function App() {
+  const [activeCategory, setActiveCategory] = useState('');
   const [activeHook, setActiveHook] = useState('');
 
-  const renderHook = () => {
-    switch (activeHook) {
-      case 'useState':
-        return <UseState />;
-      case 'useEffect':
-        return <UseEffect />;
-      case 'useContext':
-        return < UseContext />;
-      case 'useRef':
-        return <UseRef />;
-      case 'useMemo':
-        return <UseMemo />;
-      case 'useCallback':
-        return <UseCallback />;
-      case 'useReducer':
-        return <UseReducer />;
-      case 'useTransition':
-        return <UseTransitionHook />;
-      case 'useDeferredValue':
-        return <UseDeferredValueHook />;
-      case 'useLayoutEffect':
-        return <UseLayoutEffectHook />;
-      case 'useDebugValue':
-        return <UseDebugValueHook />;
-      case 'useImperativeHandle':
-        return <UseImperativeHandleHook />;
-      case 'useId':
-        return <UseId />;
+  const ActiveHookComponent = categories
+    .flatMap(category => category.hooks)
+    .find(hook => hook.name === activeHook)?.component;
 
-      default:
-        return null;
-    }
-  };
-
-  return (
-    <div className="Main-Container">
-      <h1>React Hooks Simplified</h1>
-      {renderHook()}
-      <br />
-
-      {activeHook ? (
-        <button style={{ marginTop: '60px' }} onClick={() => setActiveHook('')}>Back</button>
-      ) : (
-        <>
-          <button onClick={() => setActiveHook('useState')}>useState Hook</button>
-          <button onClick={() => setActiveHook('useEffect')}>useEffect Hook</button>
-          <button onClick={() => setActiveHook('useContext')}>useContext Hook</button>
-          <button onClick={() => setActiveHook('useRef')}>useRef Hook</button>
-          <button onClick={() => setActiveHook('useMemo')}>useMemo Hook</button>
-          <button onClick={() => setActiveHook('useCallback')}>useCallback Hook</button>
-          <button onClick={() => setActiveHook('useReducer')}>useReducer Hook</button>
-          <button onClick={() => setActiveHook('useTransition')}>useTransition Hook</button>
-          <button onClick={() => setActiveHook('useDeferredValue')}>useDeferredValue Hook</button>
-          <button onClick={() => setActiveHook('useLayoutEffect')}>useLayoutEffect Hook</button>
-          <button onClick={() => setActiveHook('useDebugValue')}>useDebugValue Hook</button>
-          <button onClick={() => setActiveHook('useImperativeHandle')}>useImperativeHandle Hook</button>
-          <button onClick={() => setActiveHook('useId')}>useId Hook</button>
-
-        </>
-      )}
-    </div>
-  );
+    return (
+      <div className="Main-Container">
+        <h1 className="h1">React Hooks Simplified</h1>
+        {ActiveHookComponent && <ActiveHookComponent />}
+        <br />
+    
+        {activeHook ? (
+          <>
+            <button className='button' onClick={() => setActiveHook('')}>Back</button>
+          </>
+        ) : activeCategory ? (
+          <>
+            {categories.find(category => category.name === activeCategory).hooks.map(hook => (
+              <h2 className="h2" key={hook.name} onClick={() => setActiveHook(hook.name)} style={{ cursor: 'pointer' }}>
+                {hook.name} 
+              </h2>
+            ))}
+            <button className='button' onClick={() => setActiveCategory('')}>Back</button>
+          </>
+        ) : (
+          categories.map(category => (
+            <h2 className="h2" key={category.name} onClick={() => setActiveCategory(category.name)} style={{ cursor: 'pointer' }}>
+              {category.name}
+            </h2>
+          ))
+        )}
+      </div>
+    );
 }
 
 export default App;
