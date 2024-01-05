@@ -1,0 +1,65 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid black;
+  /* Add this line */
+  border-radius: 10px;
+  width: 300px;
+  height: 200px;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.close-btn:focus,
+.confirm-btn:focus,
+.deny-btn:focus {
+  outline: 2px solid rgb(3, 102, 159);
+}
+
+.modal-header {
+  align-self: center;
+}
+
+.modal-body {
+  align-self: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-btn,
+.deny-btn {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.deny-btn {
+  background-color: #f44336;
+  /* Red */
+}
