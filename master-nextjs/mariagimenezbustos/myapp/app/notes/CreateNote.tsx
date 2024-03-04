@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function CreateNote() {
     const [title, setTitle] = useState("");
@@ -27,26 +27,26 @@ export default function CreateNote() {
         router.refresh();
     }
 
-  return (
-    <form onSubmit={create}>
-        <h3>Create a New Note</h3>
+    return (
+        <form onSubmit={create}>
+            <h3>Create Note</h3>
 
-        <input
-            type="text"
-            placeholder="Title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-        />
+            <input 
+                type="text"
+                placeholder="Title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+            />
 
-        <textarea
-            placeholder="Content"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-        />
+            <textarea 
+                placeholder="Content"
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+            />
 
-        <button type="submit">
-            Create Note
-        </button>
-    </form>
-  )
+            <button type="submit">
+                Create note
+            </button>
+        </form>
+    )
 }
