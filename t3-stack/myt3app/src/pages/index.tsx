@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { type NextPage } from "next";
 import { SignInButton, useUser } from "@clerk/nextjs";
 
 import { api } from "~/utils/api";
@@ -11,6 +12,7 @@ import Image from "next/image";
 import { LoadingPage, LoadingSpinner } from "~/components/loading";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import Link from "next/link";
 
 dayjs.extend(relativeTime);
 
@@ -33,8 +35,6 @@ const CreatePostWizard = () => {
       else toast.error("Failed to post! Please try again later.");
     }
   });
-
-  console.log(user);
 
   if (!user) return null;
 
@@ -93,8 +93,12 @@ const PostView = (props: PostWithUser) => {
       />
       <div className="flex flex-col">
         <div className="flex text-slate-300 gap-1">
-          <span>{`@${author.username}`}</span>
-          <span className="font-thin">{` · ${dayjs(post.createdAt).fromNow()}`}</span>
+          <Link href={`/@${author.username}`}>
+            <span>{`@${author.username}`}</span>
+          </Link>
+          <Link href={`/post/${post.id}`}>
+            <span className="font-thin">{` · ${dayjs(post.createdAt).fromNow()}`}</span>
+          </Link>
         </div>
         <span className="text-2xl">{post.content}</span>
       </div>
@@ -118,7 +122,7 @@ const Feed = () => {
   )
 }
 
-export default function Home() {
+const Home: NextPage = () => {
   const { isLoaded: userLoaded, isSignedIn } = useUser();
 
   // Start fetching ASAP
@@ -147,4 +151,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
